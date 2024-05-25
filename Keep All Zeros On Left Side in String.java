@@ -1,4 +1,3 @@
-
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
 import java.util.HashSet;
@@ -11,34 +10,29 @@ class HelloWorld
         String s = sc.nextLine();
         int count = 0;
         
-        // Count the number of zeros
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '0') {
+        // Imp Note using s.length() as it's a String & chatAt(i)
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)=='0')
+            {
                 count++;
             }
         }
-
-        // Create a StringBuilder to build the result
-        StringBuilder result = new StringBuilder();
+        System.out.println("count number of zeros"+count);
         
-        // Append zeroes to the result
-        for (int i = 0; i < count; i++) {
+        StringBuilder result = new StringBuilder();
+        for(int i=0;i<count;i++)
+        {
             result.append('0');
         }
         
-        
-        for (int i = 0; i < s.length(); i++) {
+        for(int i=0;i<s.length();i++)
+        {
             if(s.charAt(i)!='0')
             {
-            result.append(s.charAt(i));
+                result.append(s.charAt(i));
             }
         }
-        
          System.out.println(result);
-        // Append the remaining part of the string
-        //result.append(s.substring(count));
-       
-        // Print the modified string directly
-        //System.out.println(result);
     }
 }
