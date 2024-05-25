@@ -19,7 +19,8 @@ class HelloWorld
             }
         }
         System.out.println("count number of zeros"+count);
-        
+
+        // we are creating a String builder
         StringBuilder result = new StringBuilder();
         for(int i=0;i<count;i++)
         {
