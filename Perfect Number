@@ -1,0 +1,33 @@
+n=6
+we will check before 6
+1,2,3,4,5,6
+n%1==0
+then
+sum=sum+i;
+
+if(n==sum) -- yes it's perfect Number
+
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter n");
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<n;i++)
+        {
+            if(n%i==0)
+            {
+                sum=sum+i;
+            }
+        }
+        if(n==sum)
+        {
+            System.out.println("Yes perfect Number");
+        }
+        else
+        {
+            System.out.println("Not a  perfect Number");
+        }
+    }
+}
