@@ -1,3 +1,5 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
 import java.util.Scanner;
 import java.util.Set;
 import java.util.HashSet;
@@ -7,8 +9,9 @@ class HelloWorld {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter n");
         int n=sc.nextInt();
-        String arr[]=new String[n];
         sc.nextLine();
+        String arr[]=new String[n];
+        
         for(int i=0;i<arr.length;i++)
         {
             arr[i]=sc.nextLine();
@@ -19,17 +22,21 @@ class HelloWorld {
         {
             System.out.println(arr[i]);
         }
-
-      // Creating Two Sets for this of String Type
+        
+        Set<String> duplicate=new HashSet();
         Set<String> Unique=new HashSet();
-        Set<String> Duplicate=new HashSet();
         for(int i=0;i<arr.length;i++)
         {
-            if(!Unique.add(arr[i]))
+            if(Unique.add(arr[i])==false)
             {
-                Duplicate.add(arr[i]);
+                duplicate.add(arr[i]);
             }
         }
-        System.out.println(Duplicate);
+
+        // MOST IMP LINE 
+        Unique.removeAll(duplicate);
+        
+        System.out.println(Unique);
+        System.out.println(duplicate);
     }
 }
