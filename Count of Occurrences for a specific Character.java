@@ -15,6 +15,6 @@ class HelloWorld
                 count++;
             }
         }
-        System.out.println("The number of words containing 'a' is: " + count);
+        System.out.println("count of a is" + count);
     }
 }
