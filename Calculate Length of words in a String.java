@@ -7,7 +7,6 @@ class HelloWorld
   {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        String rev=" ";
         String words[]=s.split(" ");
         for(String word:words)
         {
